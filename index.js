@@ -107,10 +107,8 @@ function placeOrder(cardNumber) {
 //empty the cart array
 //return Your total cost is $71, which will be charged to the card 83296759. (where 71 is the value returned by total() and 83296759 is the credit card number passed to placeOrder())
 
-  console.log(`cardNumber = x${cardNumber}`)
-  if (cardNumber === 'undefined'){
-    return "Sorry, we don't have a credit card on file for you."
-  } else {
+
+  if (cardNumber){
     var cart = getCart();
     var total = 0;
     for (let i = 0; i < cart.length; i++){
@@ -118,6 +116,8 @@ function placeOrder(cardNumber) {
       console.log(cart.shift());
     }
     return `Your total cost is \$${total}, which will be charged to the card ${cardNumber}`
+  } else {
+    return "Sorry, we don't have a credit card on file for you."
   }
 
 }
