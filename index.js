@@ -87,11 +87,7 @@ function total() {
   }
   return total;
 }
-cart[0] = new Object ( { itemName: "apples", itemPrice: 4 });
-cart[1] = new Object ( { itemName: "oranges", itemPrice: 2 } );
-cart[2] = new Object ( { itemName: "avocados", itemPrice: 3 } );
-cart[3] = new Object ( { itemName: "bananas", itemPrice: 1 } );
-cart[4] = new Object ( { itemName: "lettuce", itemPrice: 5 } ) ;
+
 
 function removeFromCart(item) {
   // write your code here
@@ -136,4 +132,3 @@ function placeOrder(cardNumber) {
   }
 
 }
-
