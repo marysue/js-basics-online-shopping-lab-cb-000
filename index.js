@@ -28,9 +28,13 @@ function addToCart(item) {
   var max = 100;
   var random = Math.floor(Math.random() * (max - min) + min);
 
+  var cart = getCart();
   var newObj = new Object( { itemName: item, itemPrice: random });
 
-  return newObj;
+  cart[cart.length] = newObj;
+  
+    
+  return cart;
 
 }
 
