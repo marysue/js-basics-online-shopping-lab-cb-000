@@ -107,13 +107,14 @@ function placeOrder(cardNumber) {
 //empty the cart array
 //return Your total cost is $71, which will be charged to the card 83296759. (where 71 is the value returned by total() and 83296759 is the credit card number passed to placeOrder())
 
+  var cartLen = cart.length;
 
   if (cardNumber){
     var cart = getCart();
     var total = 0;
-    for (let i = 0; i < cart.length; i++){
+    for (let i = 0; i < cartLen; i++){
       total += cart[i].itemPrice;
-      console.log(cart.shift());
+      console.log(`Removing:  ${cart.shift()}`);
     }
     return `Your total cost is \$${total}, which will be charged to the card ${cardNumber}`
   } else {
@@ -121,7 +122,7 @@ function placeOrder(cardNumber) {
   }
 
 }
-cart[0] = new Object ( { itemName: "apples", itemPrice: 4 })
+cart[0] = new Object ( { itemName: "apples", itemPrice: 4 });
 cart[1] = new Object ( { itemName: "oranges", itemPrice: 2 } );
 cart[2] = new Object ( { itemName: "avocados", itemPrice: 3 } );
 cart[3] = new Object ( { itemName: "bananas", itemPrice: 1 } );
