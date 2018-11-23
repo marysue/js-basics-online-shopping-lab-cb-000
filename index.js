@@ -115,7 +115,7 @@ function placeOrder(cardNumber) {
     var total = 0;
     for (let i = 0; i < cart.length; i++){
       total += cart[i].itemPrice;
-      cart.shift();
+      console.log(cart.shift());
     }
     return `Your total cost is \$${total}, which will be charged to the card ${cardNumber}`
   }
