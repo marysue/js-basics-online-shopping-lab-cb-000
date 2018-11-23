@@ -115,7 +115,7 @@ function placeOrder(cardNumber) {
     var total = 0;
     for (let i = cartLen-1; i >= 0; i--){
       total += cart[i].itemPrice;
-      console.log("Popping ${cart[i].itemName} (hopefully...)");
+      console.log(`Popping ${cart[i].itemName} (hopefully...)`);
       cart.pop();
     }
     return `Your total cost is \$${total}, which will be charged to the card ${cardNumber}`
