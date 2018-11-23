@@ -32,8 +32,8 @@ function addToCart(item) {
   var newObj = new Object( { itemName: item, itemPrice: random });
 
   cart[cart.length] = newObj;
-  
-    
+
+
   return cart;
 
 }
